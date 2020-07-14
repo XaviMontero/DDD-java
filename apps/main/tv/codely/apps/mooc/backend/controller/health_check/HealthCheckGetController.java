@@ -28,6 +28,15 @@ public final class HealthCheckGetController extends ApiController {
         return status;
     }
 
+    @GetMapping("/health-xavi")
+    public HashMap<String, String> indexXavi() {
+        HashMap<String, String> status = new HashMap<>();
+        status.put("application", "Xavi Prueba");
+        status.put("status", "ok");
+
+        return status;
+    }
+
     @Override
     public HashMap<Class<? extends DomainError>, HttpStatus> errorMapping() {
         return null;

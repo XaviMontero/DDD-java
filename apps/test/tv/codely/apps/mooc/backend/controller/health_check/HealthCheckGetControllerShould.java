@@ -8,4 +8,9 @@ final class HealthCheckGetControllerShould extends MoocApplicationTestCase {
     void check_the_app_is_working_ok() throws Exception {
         assertResponse("/health-check", 200, "{'application':'mooc_backend','status':'ok'}");
     }
+
+    @Test
+    void check_the_app_is_working_ok_xavi() throws Exception {
+        assertResponse("/health-xavi", 200, "{'application':'Xavi Prueba','status':'ok'}");
+    }
 }
