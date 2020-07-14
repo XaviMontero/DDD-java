@@ -25,7 +25,7 @@ public final class CourseGetController extends ApiController {
     ) {
         super(queryBus, commandBus);
     }
-
+    // Hola test
     @GetMapping("/courses/{id}")
     public ResponseEntity<HashMap<String, Serializable>> index(@PathVariable String id) throws QueryHandlerExecutionError {
         CourseResponse course = ask(new FindCourseQuery(id));
