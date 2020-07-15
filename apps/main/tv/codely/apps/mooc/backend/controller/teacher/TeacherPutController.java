@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import tv.codely.mooc.teacher.application.create.CreateTeacherCommand;
 import tv.codely.mooc.teacher.application.create.TeacherCreator;
 import tv.codely.mooc.teacher.domain.Teacher;
 import tv.codely.shared.domain.DomainError;
@@ -31,7 +32,7 @@ public class TeacherPutController extends ApiController {
         @RequestBody Request request
     ) throws CommandHandlerExecutionError {
 
-            creator.create(id,request.name(),request.duration(),request.year());
+            creator.create(new CreateTeacherCommand(id,request.name(),request.duration(),request.year()));
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 

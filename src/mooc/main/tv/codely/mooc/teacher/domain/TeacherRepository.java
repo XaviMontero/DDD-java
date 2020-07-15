@@ -6,7 +6,7 @@ public interface TeacherRepository {
 
     void save(Teacher teacher);
 
-    Optional<Teacher> search(String id);
+    Optional<Teacher> search(TeacherId id);
 
 
 }

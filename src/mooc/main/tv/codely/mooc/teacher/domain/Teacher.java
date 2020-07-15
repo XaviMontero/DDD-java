@@ -1,54 +1,37 @@
 package tv.codely.mooc.teacher.domain;
 
-import tv.codely.mooc.courses.domain.CourseDuration;
-import tv.codely.mooc.courses.domain.CourseId;
-import tv.codely.mooc.courses.domain.CourseName;
 
 import java.util.Objects;
 
 public class Teacher {
-    private String id;
-    private String name;
-    private String duration;
-    private Integer year;
 
-    public void setName(String name) {
+
+    private final TeacherId id;
+    private final TeacherName name;
+    private final TeacherDuration duration;
+    private final TeacherYear year;
+
+    public Teacher(TeacherId id, TeacherName name, TeacherDuration duration, TeacherYear year) {
+        this.id = id;
         this.name = name;
-    }
-
-    public void setDuration(String duration) {
         this.duration = duration;
-    }
-
-    public void setYear(Integer year) {
         this.year = year;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String id() {
+    public TeacherId id() {
         return id;
     }
 
-    public String name() {
+    public TeacherName name() {
         return name;
     }
 
-    public String duration() {
+    public TeacherDuration duration() {
         return duration;
     }
 
-    public Integer year() {
+    public TeacherYear year() {
         return year;
-    }
-
-    public Teacher(String id, String name, String duration, Integer year) {
-        this.id = id;
-        this.name = name;
-        this.duration = duration;
-        this.year = year;
     }
 
     @Override
@@ -56,14 +39,15 @@ public class Teacher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Teacher teacher = (Teacher) o;
-        return Objects.equals(name, teacher.name) &&
+        return Objects.equals(id, teacher.id) &&
+            Objects.equals(name, teacher.name) &&
             Objects.equals(duration, teacher.duration) &&
             Objects.equals(year, teacher.year);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, duration, year);
+        return Objects.hash(id, name, duration, year);
     }
 }
 
