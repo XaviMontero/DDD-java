@@ -8,4 +8,7 @@ public class TeacherId extends Identifier {
         super(value);
     }
 
+    public TeacherId() {
+
+    }
 }

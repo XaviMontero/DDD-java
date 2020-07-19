@@ -2,10 +2,7 @@ package tv.codely.mooc.teacher.application.create;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tv.codely.mooc.courses.application.create.CourseCreator;
-import tv.codely.mooc.courses.application.create.CreateCourseCommandHandler;
 import tv.codely.mooc.teacher.TeacherModuleUnitTestCase;
-import tv.codely.mooc.teacher.application.CreateTeacherCommandMother;
 import tv.codely.mooc.teacher.domain.*;
 
 

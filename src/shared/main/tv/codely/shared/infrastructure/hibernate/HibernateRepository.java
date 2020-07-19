@@ -19,6 +19,8 @@ public abstract class HibernateRepository<T> {
         this.criteriaConverter = new HibernateCriteriaConverter<T>(sessionFactory.getCriteriaBuilder());
     }
 
+
+
     protected void persist(T entity) {
         sessionFactory.getCurrentSession().saveOrUpdate(entity);
         sessionFactory.getCurrentSession().flush();

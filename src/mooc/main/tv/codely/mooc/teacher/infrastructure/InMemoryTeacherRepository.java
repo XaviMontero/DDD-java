@@ -7,7 +7,7 @@ import tv.codely.shared.domain.Service;
 
 import java.util.HashMap;
 import java.util.Optional;
-@Service
+
 public final class InMemoryTeacherRepository implements TeacherRepository {
     private HashMap<String, Teacher> teachers = new HashMap<>();
     @Override

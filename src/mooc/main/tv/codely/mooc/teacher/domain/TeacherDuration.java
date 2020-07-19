@@ -6,4 +6,8 @@ public class TeacherDuration extends StringValueObject {
     public TeacherDuration(String value) {
         super(value);
     }
+
+    public TeacherDuration() {
+        super("");
+    }
 }

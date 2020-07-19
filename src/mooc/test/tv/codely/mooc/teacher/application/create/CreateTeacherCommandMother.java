@@ -1,4 +1,4 @@
-package tv.codely.mooc.teacher.application;
+package tv.codely.mooc.teacher.application.create;
 
 
 import tv.codely.mooc.teacher.application.create.CreateTeacherCommand;

@@ -6,4 +6,8 @@ public class TeacherYear extends IntValueObject {
     public TeacherYear(Integer value) {
         super(value);
     }
+
+    public TeacherYear() {
+        super(0);
+    }
 }

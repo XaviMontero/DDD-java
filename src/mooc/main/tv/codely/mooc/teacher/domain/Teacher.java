@@ -1,11 +1,11 @@
 package tv.codely.mooc.teacher.domain;
 
 
+import tv.codely.shared.domain.AggregateRoot;
+
 import java.util.Objects;
 
-public class Teacher {
-
-
+public class Teacher extends AggregateRoot {
     private final TeacherId id;
     private final TeacherName name;
     private final TeacherDuration duration;
@@ -18,6 +18,12 @@ public class Teacher {
         this.year = year;
     }
 
+    private Teacher() {
+        this.id = null;
+        this.name = null;
+        this.duration = null;
+        this.year = null;
+    }
     public TeacherId id() {
         return id;
     }
