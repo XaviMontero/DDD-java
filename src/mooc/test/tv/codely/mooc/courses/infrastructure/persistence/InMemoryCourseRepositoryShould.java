@@ -15,7 +15,6 @@ final class InMemoryCourseRepositoryShould extends CoursesModuleInfrastructureTe
     @Test
     void save_a_course() {
         Course course = CourseMother.random();
-
         inMemoryCourseRepository.save(course);
     }
 
