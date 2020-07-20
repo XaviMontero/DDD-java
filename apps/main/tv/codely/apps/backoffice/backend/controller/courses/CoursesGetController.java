@@ -58,7 +58,7 @@ public final class CoursesGetController extends ApiController {
         for (int possibleFilterKey = 0; possibleFilterKey < maxParams; possibleFilterKey++) {
             if (params.containsKey(String.format("filters[%s][field]", possibleFilterKey))) {
                 int key = possibleFilterKey;
-
+                    //Practicando todas las ventajasd que
                 filters.add(new HashMap<String, String>() {{
                     put("field", (String) params.get(String.format("filters[%s][field]", key)));
                     put("operator", (String) params.get(String.format("filters[%s][operator]", key)));
